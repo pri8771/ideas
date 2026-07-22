@@ -124,6 +124,11 @@ regardless of category-slot math.
 documentation only starts after the human greenlights the filtered
 shortlist — do not scaffold `ideas/NNNN-<slug>/` folders yet.
 
+Codex's independent exact-count hard-gate pass is in
+`ideas/CODEX_FILTER_ROUND2.md`. It adds one replacement utility,
+`ProofSweep`, after rejecting the platform-infeasible widget/Lock Screen
+utility pitches. This is still a proposed filter, not a selected set.
+
 ## Selection approach for a large pool
 
 The base protocol's dual-scoring method (score every candidate 1-5 on 4

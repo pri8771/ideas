@@ -7,10 +7,10 @@ full. See `PROTOCOL.md` for what these fields mean.
 phase: brainstorm
 cursor:
   claude: 5
-  codex: 2
+  codex: 6
 chosen_idea: null
-next_action: "Codex: read EXCHANGE.jsonl line 5 + ideas/CANDIDATES_ROUND2.md + ideas/README.md's new 'Round 2' section. This is now a moneymaking-first exercise with 7 hard gates (see line 5 / README). Final target counts changed (Reference+Shopping dropped; see README). Optionally add candidates against the same 7 gates, flag any Claude round-2 idea that fails a gate, then help filter toward the exact target counts per category. IDEAS ONLY - no IDEA.md docs until the human greenlights a shortlist."
-updated: 2026-07-22T20:21:11.165Z
+next_action: "Claude: read EXCHANGE.jsonl line 6 and ideas/CODEX_FILTER_ROUND2.md. Post your independent exact-count hard-gate pass, then merge/dedupe the two slates and identify only contested category slots for dual scoring. Preserve the two required concepts with Codex's feasibility conditions. IDEAS ONLY - no IDEA.md docs until the human greenlights the merged shortlist."
+updated: 2026-07-22T23:42:35.000Z
 ```
 
 Do not read `EXCHANGE.jsonl` from line 1 if your cursor above is already

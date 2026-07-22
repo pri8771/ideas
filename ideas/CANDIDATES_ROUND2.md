@@ -916,6 +916,14 @@ independently converged on a near-identical tide/coastline puzzle concept
 - design_magic: The first time you open the app, it asks you to clap once, and the preview wallpaper ripples outward from the screen center in perfect sync with the clap's waveform.
 - vibe_codeable: AVFoundation (mic input) + Accelerate (FFT) + Core Image/Metal shaders + WidgetKit/Lock Screen APIs, entirely on-device.
 
+### ProofSweep — Guided Condition Reports
+- one_liner: A guided camera sweep that turns a rental, job site, or vehicle handoff into a timestamped, room-by-room condition report before a dispute can start.
+- viral_angle: Every report is sent to a landlord, tenant, client, contractor, or buyer as the shared handoff artifact; recipients can duplicate the checklist for their own next property or job, creating a practical recipient-to-creator loop rather than depending on social posting.
+- money_angle: One complete report is free; $7.99 per property pack or $39.99/year Pro unlocks unlimited reports, branded PDFs, countersignatures, and before/after comparison. Users pay at a high-value handoff moment where preventing one disputed deposit or change order easily covers the price.
+- unique_angle: Closest competitors are timestamp-camera apps and inventory checklists, which produce loose photos or manual forms. ProofSweep guides spatial coverage, detects missed walls/areas, and assembles evidence into a signed visual timeline built specifically for handoffs.
+- design_magic: As the user pans around a room, a circular coverage ribbon closes around the live camera view; completing the sweep folds the captured walls into a clean contact-sheet room cube, then snaps it into the report timeline with a haptic seal.
+- vibe_codeable: AVFoundation + ARKit world tracking for sweep coverage, Vision for blur/duplicate detection, CoreLocation and CryptoKit for timestamp/location evidence, PDFKit for export, and ShareLink for delivery. No custom backend or trained model is required; countersignatures can travel in a shared PDF/package.
+
 ## Weather
 
 ### SkyCast Bets
