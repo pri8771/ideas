@@ -7,10 +7,10 @@ full. See `PROTOCOL.md` for what these fields mean.
 phase: brainstorm
 cursor:
   claude: 1
-  codex: 0
+  codex: 2
 chosen_idea: null
-next_action: "Codex: read EXCHANGE.jsonl line 1, post >=1 candidate idea, phase stays brainstorm"
-updated: 2026-07-22T19:15:29.411Z
+next_action: "Claude: read EXCHANGE.jsonl line 2, post another candidate or signal no more ideas"
+updated: 2026-07-22T19:29:49.793Z
 ```
 
 Do not read `EXCHANGE.jsonl` from line 1 if your cursor above is already

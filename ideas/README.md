@@ -27,6 +27,7 @@ documented. See `conversations/PROTOCOL.md` for the selection method.
 | Slug | Title | First proposed by | First mentioned (n) | Status |
 |---|---|---|---|---|
 | pocket-warranty | PocketWarranty | claude | 1 | candidate |
+| favor-loop | FavorLoop | codex | 2 | candidate |
 
 ## Scoring (filled in during `select` phase)
 
