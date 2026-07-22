@@ -94,20 +94,57 @@ pitches.
 58 candidates total. Codex is invited to add more to any category, or
 propose replacements, per `conversations/PROTOCOL.md`.
 
+## Round 2 — moneymaking filter (current)
+
+Per a follow-up human request: the goal is now explicitly revenue and
+growth, not a portfolio piece. Round 2 added ~150 more overgenerated
+candidates in `ideas/CANDIDATES_ROUND2.md`, screened against 7 hard
+gates (an idea failing any one is disqualified, not just noted):
+
+1. Beautifully, magically designed — a specific "aha" moment, not generic "clean UI."
+2. Real viral potential — a named, specific mechanism.
+3. Monetizes without feeling cheap or scammy — a named mechanism.
+4. Genuinely unique — names the cliché/competitor and the differentiator.
+5. Not dumb or gimmicky — real utility/entertainment beyond the novelty.
+6. Vibe-codeable — one dev, AI-assisted, on-device frameworks, no custom backend/ML training.
+7. Privacy is NOT a design constraint — data-driven monetization is fair game where it fits; don't default to privacy caution out of habit.
+
+**Round 2 final targets** (supersedes Round 1 counts where they differ):
+3 each for Business/Developer/Education/Entertainment/Finance/Food &
+Drink/Graphics & Design; 5 for Games (aiming for ~2 idle + ~2 puzzle +
+1 other genre); 5 for Health & Fitness; 7 for Medical; 2 each for Music/
+Navigation/Social Networking/Sports/Travel/Utilities/Weather. **Reference
+and Shopping are dropped this round** (human's explicit call — Round 1's
+entries in those categories remain in the pool but aren't being actively
+filtered toward a target). Plus 2 user-specified concept apps
+(`GroundCover`, `Compendium` — see `CANDIDATES_ROUND2.md`) that count
+regardless of category-slot math.
+
+**No docs yet.** Per the human: this stage is ideas only. `IDEA.md`
+documentation only starts after the human greenlights the filtered
+shortlist — do not scaffold `ideas/NNNN-<slug>/` folders yet.
+
 ## Selection approach for a large pool
 
 The base protocol's dual-scoring method (score every candidate 1-5 on 4
-criteria) doesn't scale cleanly to 58 candidates — that's 464 numbers
-per agent. Amendment, until superseded:
+criteria) doesn't scale cleanly to 200+ candidates. Amendment, until
+superseded:
 
-1. **Shortlist first.** Each agent independently picks its top 8-10
-   favorites across all categories (not per category), posted as a turn,
-   without reading the other agent's shortlist first.
-2. **Union the shortlists**, dedupe overlaps.
+0. **Hard-gate filter first** (Round 2 only): drop anything failing one
+   of the 7 gates above before shortlisting.
+1. **Shortlist first.** Each agent independently picks its favorites
+   across all categories (not per category) — aiming toward roughly the
+   Round 2 final target counts per category — posted as a turn, without
+   reading the other agent's shortlist first.
+2. **Union the shortlists**, dedupe overlaps (including the near-duplicate
+   concepts flagged inline in `CANDIDATES_ROUND2.md`, e.g. `Tideline`
+   appearing in both rounds, `Swatchbound`/`Palette Cam`/`Palette
+   Alchemist` all being the same idea).
 3. Apply the base protocol's full dual-scoring (1-5 on `market_need`,
    `feasibility_for_one_dev`, `novelty`, `monetization_potential`) only to
    that shortlist union.
-4. Highest total wins; tie-break rules unchanged from `PROTOCOL.md`.
+4. Highest total wins per category slot; tie-break rules unchanged from
+   `PROTOCOL.md`.
 
 ## Scoring (filled in during `select` phase, on the shortlist union only)
 
