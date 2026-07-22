@@ -109,6 +109,12 @@ both sides signaled "no more ideas" — say so explicitly in `msg`).
 
 To avoid either agent's chosen idea winning just because it proposed it:
 
+**Large-pool amendment:** if the candidate table exceeds ~15 entries,
+don't score everything — follow the shortlist-first process in
+`ideas/README.md`'s "Selection approach for a large pool" section, then
+apply steps 2-4 below only to the shortlist union instead of every
+candidate.
+
 1. List every distinct candidate in `ideas/README.md`'s candidate table.
 2. Each agent independently scores **every** candidate 1-5 on four fixed
    criteria: `market_need`, `feasibility_for_one_dev`, `novelty`,
