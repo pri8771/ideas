@@ -125,14 +125,13 @@ documentation only starts after the human greenlights the filtered
 shortlist — do not scaffold `ideas/NNNN-<slug>/` folders yet.
 
 Codex's independent exact-count hard-gate pass is in
-`ideas/CODEX_FILTER_ROUND2.md`. It adds one replacement utility,
-`ProofSweep`, after rejecting the platform-infeasible widget/Lock Screen
-utility pitches. Claude's independent pass is in
-`ideas/CLAUDE_FILTER_ROUND2.md` — 15 of 17 category slates matched
-exactly (Health & Fitness and Medical matched candidate-for-candidate).
-4 contested slots remain (Business, Developer, Games-idle, Utilities)
-pending dual scoring per `PROTOCOL.md`'s select phase. Still a proposed
-filter, not a selected set.
+`ideas/CODEX_FILTER_ROUND2.md`. Claude's independent pass is in
+`ideas/CLAUDE_FILTER_ROUND2.md`. The two converged on 15 of 17 category
+slates exactly (Health & Fitness and Medical matched candidate-for-
+candidate). The remaining 4 contested slots were resolved by dual
+scoring — see "Scoring" and "Selected idea" below. **The full slate is
+now finalized and posted for human review — it is a proposal, not an
+automatic green light to start writing `IDEA.md` docs.**
 
 ## Selection approach for a large pool
 
@@ -156,17 +155,56 @@ superseded:
 4. Highest total wins per category slot; tie-break rules unchanged from
    `PROTOCOL.md`.
 
-## Scoring (filled in during `select` phase, on the shortlist union only)
+## Scoring (contested slots only — the other slots were unanimous)
 
-| Slug | market_need (C) | feasibility (C) | novelty (C) | monetization (C) | market_need (X) | feasibility (X) | novelty (X) | monetization (X) | Total |
-|---|---|---|---|---|---|---|---|---|---|
+| Candidate | Slot | market_need (C) | feasibility (C) | novelty (C) | monetization (C) | market_need (X) | feasibility (X) | novelty (X) | monetization (X) | Total | Result |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| Ledger Line | Business 3rd | 3 | 5 | 5 | 3 | 3 | 5 | 5 | 3 | 32 | loses tie-break |
+| WarrantyVault | Business 3rd | 4 | 5 | 3 | 4 | 4 | 5 | 3 | 4 | 32 | **wins** (tie-break b: earlier posting order, n:1 vs n:4) |
+| SF Symbols Studio | Developer 3rd | 3 | 2 | 3 | 4 | 4 | 2 | 3 | 4 | 25 | loses |
+| RegexArena | Developer 3rd | 3 | 5 | 4 | 3 | 3 | 5 | 4 | 3 | 30 | **wins** |
+| Idle Bakery Legacy | Games idle 2nd | 4 | 5 | 3 | 4 | 4 | 5 | 4 | 4 | 33 | loses |
+| Cascade Vault | Games idle 2nd | 4 | 4 | 5 | 4 | 4 | 4 | 5 | 4 | 34 | **wins** |
+| ProofSweep | Utilities 2nd | 5 | 4 | 4 | 5 | 5 | 4 | 4 | 5 | 36 | **confirmed** |
 
-`(C)` = Claude's score, `(X)` = Codex's score. Filled in only after both
-sides have posted independent scores per `PROTOCOL.md`.
+`(C)` = Claude's score, `(X)` = Codex's score.
 
 ## Selected idea
 
-None yet.
+**Status: finalized slate, proposed to the human — awaiting explicit
+approval before any `IDEA.md` documentation begins.** Per
+`conversations/PROTOCOL.md`'s `select` phase, this is a multi-app slate
+(54 items: 52 category slots + 2 required concepts), not a single
+winner.
+
+| Category | Selected |
+|---|---|
+| Business | InvoiceSnap · HuddleSplit · WarrantyVault |
+| Developer | CodeShot · JSON Detective · RegexArena |
+| Education | StudyStreak Rooms · Flashcard Alchemist · Handwriting Coach |
+| Entertainment | Ghostwriter's Ear · Constellation Diary · Encore |
+| Finance | SplitStack · Subscription Autopsy · NetWorth Snap |
+| Food & Drink | Plate Roulette · Pour Over Pace · Leftover Alchemist |
+| Graphics & Design | Signature Studio · Poster Remix · Type Rhythm |
+| Games | Idle Aquarium Architect (idle) · Cascade Vault (idle) · Tideline (puzzle) · Chromatic (puzzle) · Ricochet Rooms (other) |
+| Health & Fitness | Rep Ghost · Face the Week · Cravings Timer · Squad Steps · Zen Garden Breath |
+| Medical | MedList Pro · Waitroom · Bedside Manner · Caregiver Relay · DoseClock · Afterglow (Recovery Countdown) · The White Coat Ledger |
+| Music | HarmonyMirror · CrateDigger |
+| Navigation | Scenic Route Composer · Convoy |
+| Social Networking | Most Likely · Two |
+| Sports | Trophy Case · FinishLine Story |
+| Travel | TripFilm · Layover Genie |
+| Utilities | Anything Scanner Pro · ProofSweep |
+| Weather | SkyCast Bets · Golden Hour |
+| Required concepts | GroundCover · Compendium |
+
+Full pitches for every one of these: `ideas/CANDIDATES_ROUND2.md` (and
+`ideas/CANDIDATES.md` for anything carried over from Round 1). Feasibility
+conditions attached to specific ideas during filtering (e.g. GroundCover
+using ZCTAs, Compendium launching POI/region-first, Plate Roulette
+dropping the paid reroll, Layover Genie scoping to a small airport pack)
+are recorded in `ideas/CODEX_FILTER_ROUND2.md`'s "Conditions before
+scoring" section and should carry into each idea's eventual `IDEA.md`.
 
 ## Documented ideas
 

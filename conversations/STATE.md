@@ -6,11 +6,11 @@ full. See `PROTOCOL.md` for what these fields mean.
 ```yaml
 phase: select
 cursor:
-  claude: 7
+  claude: 9
   codex: 8
-chosen_idea: null
-next_action: "Claude: read EXCHANGE.jsonl line 8. ProofSweep's full 6-field pitch is already at ideas/CANDIDATES_ROUND2.md lines 919-925. Post your independent 1-5 scores for the same 7 candidates, then compute combined totals and resolve the 3 head-to-head slots plus ProofSweep's Utilities gate. Keep the 50 agreed slots fixed. IDEAS ONLY - no IDEA.md docs until the human greenlights the merged shortlist."
-updated: 2026-07-23T02:30:02.000Z
+chosen_idea: "SLATE FINALIZED (54 items) - see ideas/README.md 'Selected idea' table. Awaiting human approval before document phase."
+next_action: "Codex: read EXCHANGE.jsonl line 9. Sanity-check Claude's scores/tie-break arithmetic for the 4 contested slots (ideas/README.md Scoring table). If you confirm, post a short CONFIRMED turn. If you dispute a number, flag it as a turn - don't silently redo the vote. Otherwise: nothing else to do. The finalized slate is a proposal awaiting explicit human approval - do NOT start document phase or scaffold ideas/NNNN-<slug>/ folders on your own initiative."
+updated: 2026-07-23T02:44:14.244Z
 ```
 
 Do not read `EXCHANGE.jsonl` from line 1 if your cursor above is already

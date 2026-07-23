@@ -105,41 +105,65 @@ commitment yet. Move to `select` once there are at least 3 distinct
 candidates and neither agent has posted a new one in its last turn (i.e.
 both sides signaled "no more ideas" — say so explicitly in `msg`).
 
-### 2. `select` — unbiased choice
+### 2. `select` — unbiased choice, multiple winners per category
 
-To avoid either agent's chosen idea winning just because it proposed it:
+**This selects a shortlist of MULTIPLE apps, not one single winner.**
+The human wants several ideas per App Store category (the exact counts
+are set in `ideas/README.md`'s Round 2 target-counts table — e.g. 3 for
+Business, 5 for Games, 7 for Medical, 2 for Music, etc.) plus any
+standalone required concepts. Never collapse the whole selection down to
+a single "chosen_idea" the way an early draft of this file implied — a
+per-category slate is the actual deliverable of this phase.
 
 **Large-pool amendment:** if the candidate table exceeds ~15 entries,
 don't score everything — follow the shortlist-first process in
-`ideas/README.md`'s "Selection approach for a large pool" section, then
-apply steps 2-4 below only to the shortlist union instead of every
-candidate.
+`ideas/README.md`'s "Selection approach for a large pool" section
+(hard-gate filter → independent per-category exact-count picks →
+dual-score only contested slots) instead of scoring every candidate
+against every other one.
 
-1. List every distinct candidate in `ideas/README.md`'s candidate table.
-2. Each agent independently scores **every** candidate 1-5 on four fixed
-   criteria: `market_need`, `feasibility_for_one_dev`, `novelty`,
-   `monetization_potential`. Post scores as a turn — do not read the other
-   agent's scores before posting your own (if the other agent already
-   posted its scores when you wake up, that's fine, you're not colluding,
-   just don't revise yours after seeing them).
-3. Sum all 8 numbers (4 criteria × 2 agents) per candidate. Highest total
-   wins.
-4. Tie-break, in order, until broken: (a) higher sum of
+1. List every distinct candidate in `ideas/README.md` / the relevant
+   `CANDIDATES*.md` file, organized by category.
+2. Each agent independently picks its own exact-count slate per category
+   (hard-gate filter first if the pool is large). Post as a turn.
+3. Union the two slates. Where they agree on a category's slots, that's
+   settled — no scoring needed. Where they disagree (a category has more
+   agreed-strong candidates than slots), those specific slots are
+   "contested" and get the four-factor dual score: each agent
+   independently scores just the contested candidates 1-5 on
+   `market_need`, `feasibility_for_one_dev`, `novelty`,
+   `monetization_potential` — do not read the other agent's scores before
+   posting your own (if the other agent already posted when you wake up,
+   that's fine, you're not colluding, just don't revise yours after
+   seeing them).
+4. Sum all 8 numbers per contested candidate. Highest total wins its slot.
+5. Tie-break, in order, until broken: (a) higher sum of
    `feasibility_for_one_dev` across both agents; (b) earlier candidate by
-   posting order (lower `n` of its first mention).
-5. Whoever computes the final tally posts the result as a turn with
-   `phase:"select"` and the winning slug, and sets `chosen_idea` in
-   `STATE.md`. The other agent should sanity-check the arithmetic on its
-   next wake-up and either confirm or flag a dispute as a turn — do not
-   silently redo the whole vote.
+   posting order (lower `n` of its first mention, or first row order in
+   whichever `CANDIDATES*.md` file it appears in).
+6. Whoever resolves the contested slots posts the full final slate (every
+   category's exact-count picks, not just the contested ones) as a turn,
+   and records it in `ideas/README.md` under "Selected idea" (despite the
+   singular name, this holds the whole multi-app slate). The other agent
+   sanity-checks the arithmetic on its next wake-up and either confirms or
+   flags a dispute — do not silently redo the whole vote.
+7. **The finalized slate is a proposal to the human, not an automatic
+   green light to start documenting.** Post it clearly and wait — do not
+   advance to `document` phase until the human explicitly approves it (or
+   approves specific items from it). If the human approves only some
+   items, only those move to `document`.
 
 ### 3. `document`
 
-Winning idea gets a full `ideas/NNNN-<slug>/IDEA.md` per
-`ideas/_TEMPLATE/IDEA.md` and the central
-`standards/documentation/LLM_DOCUMENTATION_STANDARD.md`. Either agent may
-draft it; the other reviews on its next wake-up and either approves (turn
-with `phase:"document"`, `msg` starting `APPROVED`) or requests changes.
+Every approved idea from the final slate gets its own full
+`ideas/NNNN-<slug>/IDEA.md` per `ideas/_TEMPLATE/IDEA.md` and the central
+`standards/documentation/LLM_DOCUMENTATION_STANDARD.md` — this phase
+produces many documents, one per approved idea, not a single document.
+Either agent may draft any given idea's doc; the other reviews on its
+next wake-up and either approves (turn with `phase:"document"`, `msg`
+starting `APPROVED` and naming the slug) or requests changes. Track
+per-idea document status in `ideas/README.md`'s "Documented ideas" table
+so it's clear which of the approved set still need a doc.
 
 ### 4. `done`
 
