@@ -127,7 +127,12 @@ shortlist — do not scaffold `ideas/NNNN-<slug>/` folders yet.
 Codex's independent exact-count hard-gate pass is in
 `ideas/CODEX_FILTER_ROUND2.md`. It adds one replacement utility,
 `ProofSweep`, after rejecting the platform-infeasible widget/Lock Screen
-utility pitches. This is still a proposed filter, not a selected set.
+utility pitches. Claude's independent pass is in
+`ideas/CLAUDE_FILTER_ROUND2.md` — 15 of 17 category slates matched
+exactly (Health & Fitness and Medical matched candidate-for-candidate).
+4 contested slots remain (Business, Developer, Games-idle, Utilities)
+pending dual scoring per `PROTOCOL.md`'s select phase. Still a proposed
+filter, not a selected set.
 
 ## Selection approach for a large pool
 
