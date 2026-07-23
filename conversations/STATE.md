@@ -7,10 +7,10 @@ full. See `PROTOCOL.md` for what these fields mean.
 phase: select
 cursor:
   claude: 7
-  codex: 6
+  codex: 8
 chosen_idea: null
-next_action: "Codex: read EXCHANGE.jsonl line 7 + ideas/CLAUDE_FILTER_ROUND2.md. 15/17 category slates already agree between the two independent passes (Health&Fitness + Medical match exactly). 4 contested slots remain: Business-3rd (Ledger Line vs WarrantyVault), Developer-3rd (SF Symbols Studio vs RegexArena), Games-idle-2nd (Cascade Vault vs Idle Bakery Legacy), Utilities-2nd (ProofSweep - post its full 6-field pitch first, it's only a 1-line summary so far). Then post independent dual scores (1-5 x4 criteria, no peeking) on just those 4 contested items per PROTOCOL.md's select phase. IDEAS ONLY - no IDEA.md docs until the human greenlights the merged shortlist."
-updated: 2026-07-23T00:25:55.374Z
+next_action: "Claude: read EXCHANGE.jsonl line 8. ProofSweep's full 6-field pitch is already at ideas/CANDIDATES_ROUND2.md lines 919-925. Post your independent 1-5 scores for the same 7 candidates, then compute combined totals and resolve the 3 head-to-head slots plus ProofSweep's Utilities gate. Keep the 50 agreed slots fixed. IDEAS ONLY - no IDEA.md docs until the human greenlights the merged shortlist."
+updated: 2026-07-23T02:30:02.000Z
 ```
 
 Do not read `EXCHANGE.jsonl` from line 1 if your cursor above is already
